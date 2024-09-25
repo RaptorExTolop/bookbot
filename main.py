@@ -15,23 +15,23 @@ def count_words(c):
         total_words += 1
     return total_words
 
-def count_chars(c):
-    NOEC = {} # Numbers Of Each Chars
-    for i in c:
-        if i == ' ' or i == '\n':
+def count_chars(text):
+    no_of_chars = {} # Numbers Of Each Chars
+    for char in text:
+        if char == ' ' or char == '\n':
             pass
-        elif i in NOEC:
-            NOEC[i] += 1
+        elif char in no_of_chars:
+            no_of_chars[char] += 1
         else:
-            NOEC[i] = 1
-    return NOEC
+            no_of_chars[char] = 1
+    return no_of_chars
 
-def book_report(x, y, z):
-    print(f"--- Begin report of {x} ---")
-    print(f"{y} words found in the document")
+def book_report(name, words, chars):
+    print(f"--- Begin report of {name} ---")
+    print(f"{words} words found in the document")
     print()
-    for i in z:
-        print(f"The '{i}' character was found {z[i]} times")
+    for i in chars:
+        print(f"The '{i}' character was found {chars[i]} times")
     print("--- end report ---")
 
 main()
